@@ -1,0 +1,770 @@
+
+== 1. System Information ==
+
+== 2. Scenario Inputs From README ==
+
+== 3. Baseline Snapshot ==
+
+== 4. Users and Administrators ==
+root                 uid=0      home=/root                          shell=/bin/bash
+daemon               uid=1      home=/usr/sbin                      shell=/usr/sbin/nologin
+bin                  uid=2      home=/bin                           shell=/usr/sbin/nologin
+sys                  uid=3      home=/dev                           shell=/usr/sbin/nologin
+sync                 uid=4      home=/bin                           shell=/bin/sync
+games                uid=5      home=/usr/games                     shell=/usr/sbin/nologin
+man                  uid=6      home=/var/cache/man                 shell=/usr/sbin/nologin
+lp                   uid=7      home=/var/spool/lpd                 shell=/usr/sbin/nologin
+mail                 uid=8      home=/var/mail                      shell=/usr/sbin/nologin
+news                 uid=9      home=/var/spool/news                shell=/usr/sbin/nologin
+uucp                 uid=10     home=/var/spool/uucp                shell=/usr/sbin/nologin
+proxy                uid=13     home=/bin                           shell=/usr/sbin/nologin
+www-data             uid=33     home=/var/www                       shell=/usr/sbin/nologin
+backup               uid=34     home=/var/backups                   shell=/usr/sbin/nologin
+list                 uid=38     home=/var/list                      shell=/usr/sbin/nologin
+irc                  uid=39     home=/run/ircd                      shell=/usr/sbin/nologin
+gnats                uid=41     home=/var/lib/gnats                 shell=/usr/sbin/nologin
+nobody               uid=65534  home=/nonexistent                   shell=/usr/sbin/nologin
+systemd-network      uid=100    home=/run/systemd                   shell=/usr/sbin/nologin
+systemd-resolve      uid=101    home=/run/systemd                   shell=/usr/sbin/nologin
+messagebus           uid=102    home=/nonexistent                   shell=/usr/sbin/nologin
+systemd-timesync     uid=103    home=/run/systemd                   shell=/usr/sbin/nologin
+syslog               uid=104    home=/home/syslog                   shell=/usr/sbin/nologin
+_apt                 uid=105    home=/nonexistent                   shell=/usr/sbin/nologin
+tss                  uid=106    home=/var/lib/tpm                   shell=/bin/false
+rtkit                uid=107    home=/proc                          shell=/usr/sbin/nologin
+systemd-coredump     uid=108    home=/run/systemd                   shell=/usr/sbin/nologin
+kernoops             uid=109    home=/                              shell=/usr/sbin/nologin
+uuidd                uid=110    home=/run/uuidd                     shell=/usr/sbin/nologin
+cups-pk-helper       uid=111    home=/home/cups-pk-helper           shell=/usr/sbin/nologin
+lightdm              uid=112    home=/var/lib/lightdm               shell=/bin/false
+tcpdump              uid=113    home=/nonexistent                   shell=/usr/sbin/nologin
+speech-dispatcher    uid=114    home=/run/speech-dispatcher         shell=/bin/false
+avahi-autoipd        uid=115    home=/var/lib/avahi-autoipd         shell=/usr/sbin/nologin
+usbmux               uid=116    home=/var/lib/usbmux                shell=/usr/sbin/nologin
+nm-openvpn           uid=117    home=/var/lib/openvpn/chroot        shell=/usr/sbin/nologin
+geoclue              uid=118    home=/var/lib/geoclue               shell=/usr/sbin/nologin
+dnsmasq              uid=119    home=/var/lib/misc                  shell=/usr/sbin/nologin
+pulse                uid=120    home=/run/pulse                     shell=/usr/sbin/nologin
+_flatpak             uid=121    home=/nonexistent                   shell=/usr/sbin/nologin
+avahi                uid=122    home=/run/avahi-daemon              shell=/usr/sbin/nologin
+saned                uid=123    home=/var/lib/saned                 shell=/usr/sbin/nologin
+colord               uid=124    home=/var/lib/colord                shell=/usr/sbin/nologin
+fwupd-refresh        uid=125    home=/run/systemd                   shell=/usr/sbin/nologin
+hplip                uid=126    home=/run/hplip                     shell=/bin/false
+chowe                uid=1014   home=/home/chowe                    shell=/bin/bash
+ftp                  uid=127    home=/srv/ftp                       shell=/usr/sbin/nologin
+felix                uid=500    home=/home/felix                    shell=/usr/sbin/nologin
+rowan                uid=1019   home=/home/rowan                    shell=/bin/bash
+kaia                 uid=1020   home=/home/kaia                     shell=/bin/bash
+nolan                uid=1021   home=/home/nolan                    shell=/bin/bash
+finn                 uid=1022   home=/home/finn                     shell=/bin/bash
+bennett              uid=1023   home=/home/bennett                  shell=/bin/bash
+quinn                uid=1024   home=/home/quinn                    shell=/bin/bash
+reed                 uid=1025   home=/home/reed                     shell=/bin/bash
+aria                 uid=1026   home=/home/aria                     shell=/bin/bash
+nova                 uid=1027   home=/home/nova                     shell=/bin/bash
+elias                uid=1028   home=/home/elias                    shell=/bin/bash
+ivy                  uid=1029   home=/home/ivy                      shell=/bin/bash
+sienna               uid=1030   home=/home/sienna                   shell=/bin/bash
+rabia                uid=1031   home=/home/rabia                    shell=/bin/sh
+ezekiel              uid=1032   home=/home/ezekiel                  shell=/bin/sh
+albert               uid=1033   home=/home/albert                   shell=/bin/sh
+
+== 5. README-Required Groups ==
+
+== 6. Root and Empty Passwords ==
+
+== 7. Password Aging ==
+
+== 8. PAM Minimum Password Length ==
+
+== 9. PAM Null Password Authentication ==
+
+== 10. Account Lockout / pam_faillock ==
+
+== 11. Kernel Network Hardening ==
+
+== 12. Firewall ==
+
+== 13. Services ==
+  UNIT                                                  LOAD   ACTIVE SUB     DESCRIPTION
+  accounts-daemon.service                               loaded active running Accounts Service
+  acpid.service                                         loaded active running ACPI event daemon
+  alsa-restore.service                                  loaded active exited  Save/Restore Sound Card State
+  apparmor.service                                      loaded active exited  Load AppArmor profiles
+  blk-availability.service                              loaded active exited  Availability of block devices
+  ccsclient.service                                     loaded active running CCS Client Service
+  console-setup.service                                 loaded active exited  Set console font and keymap
+  cron.service                                          loaded active running Regular background program processing daemon
+  dbus.service                                          loaded active running D-Bus System Message Bus
+  finalrd.service                                       loaded active exited  Create final runtime dir for shutdown pivot root
+  fwupd.service                                         loaded active running Firmware update daemon
+  getty@tty1.service                                    loaded active running Getty on tty1
+  ifupdown-pre.service                                  loaded active exited  Helper to synchronize boot up for ifupdown
+  irqbalance.service                                    loaded active running irqbalance daemon
+  kerneloops.service                                    loaded active running Tool to automatically collect and submit kernel crash signatures
+  keyboard-setup.service                                loaded active exited  Set the console keyboard layout
+  kmod-static-nodes.service                             loaded active exited  Create List of Static Device Nodes
+  lightdm.service                                       loaded active running Light Display Manager
+  lm-sensors.service                                    loaded active exited  Initialize hardware monitoring sensors
+  lvm2-monitor.service                                  loaded active exited  Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling
+  ModemManager.service                                  loaded active running Modem Manager
+  networkd-dispatcher.service                           loaded active running Dispatcher daemon for systemd-networkd
+  networking.service                                    loaded active exited  Raise network interfaces
+  NetworkManager.service                                loaded active running Network Manager
+  open-vm-tools.service                                 loaded active running Service for virtual machines hosted on VMware
+  openvpn.service                                       loaded active exited  OpenVPN service
+  packagekit.service                                    loaded active running PackageKit Daemon
+  plymouth-quit-wait.service                            loaded active exited  Hold until boot process finishes up
+  plymouth-read-write.service                           loaded active exited  Tell Plymouth To Write Out Runtime Data
+  plymouth-start.service                                loaded active exited  Show Plymouth Boot Screen
+  polkit.service                                        loaded active running Authorization Manager
+  rsyslog.service                                       loaded active running System Logging Service
+  rtkit-daemon.service                                  loaded active running RealtimeKit Scheduling Policy Service
+  setvtrgb.service                                      loaded active exited  Set console scheme
+  squid.service                                         loaded active running Squid Web Proxy Server
+  switcheroo-control.service                            loaded active running Switcheroo Control Proxy service
+  systemd-binfmt.service                                loaded active exited  Set Up Additional Binary Formats
+  systemd-fsck@dev-disk-by\x2duuid-DFF5\x2d2DB7.service loaded active exited  File System Check on /dev/disk/by-uuid/DFF5-2DB7
+  systemd-journal-flush.service                         loaded active exited  Flush Journal to Persistent Storage
+  systemd-journald.service                              loaded active running Journal Service
+  systemd-logind.service                                loaded active running User Login Management
+  systemd-modules-load.service                          loaded active exited  Load Kernel Modules
+  systemd-random-seed.service                           loaded active exited  Load/Save Random Seed
+  systemd-remount-fs.service                            loaded active exited  Remount Root and Kernel File Systems
+  systemd-resolved.service                              loaded active running Network Name Resolution
+  systemd-sysctl.service                                loaded active exited  Apply Kernel Variables
+  systemd-sysusers.service                              loaded active exited  Create System Users
+  systemd-timesyncd.service                             loaded active running Network Time Synchronization
+  systemd-tmpfiles-setup-dev.service                    loaded active exited  Create Static Device Nodes in /dev
+  systemd-tmpfiles-setup.service                        loaded active exited  Create Volatile Files and Directories
+  systemd-udev-settle.service                           loaded active exited  Wait for udev To Complete Device Initialization
+  systemd-udev-trigger.service                          loaded active exited  Coldplug All udev Devices
+  systemd-udevd.service                                 loaded active running Rule-based Manager for Device Events and Files
+  systemd-update-utmp.service                           loaded active exited  Record System Boot/Shutdown in UTMP
+  systemd-user-sessions.service                         loaded active exited  Permit User Sessions
+  ubuntu-system-adjustments.service                     loaded active exited  Ubuntu system adjustments
+  udisks2.service                                       loaded active running Disk Manager
+  ufw.service                                           loaded active exited  Uncomplicated firewall
+  upower.service                                        loaded active running Daemon for power management
+  user-runtime-dir@1014.service                         loaded active exited  User Runtime Directory /run/user/1014
+  user@1014.service                                     loaded active running User Manager for UID 1014
+  vgauth.service                                        loaded active running Authentication service for virtual machines hosted on VMware
+  vsftpd.service                                        loaded active running vsftpd FTP server
+  wpa_supplicant.service                                loaded active running WPA supplicant
+  zfs-load-module.service                               loaded active exited  Install ZFS kernel module
+  zfs-mount.service                                     loaded active exited  Mount ZFS filesystems
+  zfs-share.service                                     loaded active exited  ZFS file system shares
+  zfs-volume-wait.service                               loaded active exited  Wait for ZFS Volume (zvol) links in /dev
+  zfs-zed.service                                       loaded active running ZFS Event Daemon (zed)
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+69 loaded units listed.
+UNIT FILE                          STATE   VENDOR PRESET
+accounts-daemon.service            enabled enabled
+anacron.service                    enabled enabled
+apparmor.service                   enabled enabled
+blk-availability.service           enabled enabled
+blueman-mechanism.service          enabled enabled
+bluetooth.service                  enabled enabled
+casper-md5check.service            enabled enabled
+casper.service                     enabled enabled
+ccsclient.service                  enabled enabled
+console-setup.service              enabled enabled
+cron.service                       enabled enabled
+cups-browsed.service               enabled enabled
+dmesg.service                      enabled enabled
+dns-clean.service                  enabled enabled
+e2scrub_reap.service               enabled enabled
+finalrd.service                    enabled enabled
+getty@.service                     enabled enabled
+gpu-manager.service                enabled enabled
+grub-common.service                enabled enabled
+grub-initrd-fallback.service       enabled enabled
+irqbalance.service                 enabled enabled
+kerneloops.service                 enabled enabled
+keyboard-setup.service             enabled enabled
+lm-sensors.service                 enabled enabled
+lvm2-monitor.service               enabled enabled
+mintsystem.service                 enabled enabled
+ModemManager.service               enabled enabled
+networkd-dispatcher.service        enabled enabled
+networking.service                 enabled enabled
+NetworkManager-dispatcher.service  enabled enabled
+NetworkManager-wait-online.service enabled enabled
+NetworkManager.service             enabled enabled
+open-vm-tools.service              enabled enabled
+openvpn.service                    enabled enabled
+rsyslog.service                    enabled enabled
+secureboot-db.service              enabled enabled
+setvtrgb.service                   enabled enabled
+squid.service                      enabled enabled
+switcheroo-control.service         enabled enabled
+systemd-pstore.service             enabled enabled
+systemd-resolved.service           enabled enabled
+systemd-timesyncd.service          enabled enabled
+thermald.service                   enabled enabled
+ubuntu-system-adjustments.service  enabled enabled
+udisks2.service                    enabled enabled
+ufw.service                        enabled enabled
+vgauth.service                     enabled enabled
+vsftpd.service                     enabled enabled
+wpa_supplicant.service             enabled enabled
+zfs-import-cache.service           enabled enabled
+zfs-load-module.service            enabled enabled
+zfs-mount.service                  enabled enabled
+zfs-share.service                  enabled enabled
+zfs-volume-wait.service            enabled enabled
+zfs-zed.service                    enabled enabled
+
+55 unit files listed.
+
+== 14. Package Updates ==
+Listing...
+
+== 15. SSH Hardening ==
+
+== 16. Listening Ports and Backdoor Hunting ==
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                           
+LISTEN 0      1            0.0.0.0:1337      0.0.0.0:*    users:(("python3",pid=2227,fd=3))
+LISTEN 0      32           0.0.0.0:21        0.0.0.0:*    users:(("vsftpd",pid=32794,fd=3))
+LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=14362,fd=14))
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                     
+udp   UNCONN 0      0        224.0.0.251:5353      0.0.0.0:*    users:(("chromium",pid=1840,fd=166))       
+udp   UNCONN 0      0      127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=14362,fd=13))
+tcp   LISTEN 0      1            0.0.0.0:1337      0.0.0.0:*    users:(("python3",pid=2227,fd=3))          
+tcp   LISTEN 0      32           0.0.0.0:21        0.0.0.0:*    users:(("vsftpd",pid=32794,fd=3))          
+tcp   LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=14362,fd=14))
+root         738       1  0 02:11 ?        00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+chowe       1523    1103  0 02:11 ?        00:00:00 /usr/bin/python3 /usr/bin/blueman-applet
+chowe       1549    1103  0 02:11 ?        00:00:00 /usr/bin/python3 /usr/share/system-config-printer/applet.py
+root        2226    2225  0 02:12 ?        00:00:00 /bin/sh -c python3 /usr/share/zod/kneelB4zod.py
+root        2227    2226  0 02:12 ?        00:00:00 python3 /usr/share/zod/kneelB4zod.py
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                           
+LISTEN 0      1            0.0.0.0:1337      0.0.0.0:*    users:(("python3",pid=2227,fd=3))
+
+== 17. Prohibited Media ==
+/home/bennett/Music/The Dave Brubeck Quartet/Time Out/2 Strange Meadow Lark.ogg
+/home/bennett/Music/The Dave Brubeck Quartet/Time Out/3 Take Five.ogg
+/home/bennett/Music/The Dave Brubeck Quartet/Time Out/6 Everybody's Jumpin'.ogg
+/home/bennett/Music/The Dave Brubeck Quartet/Time Out/5 Kathy's Waltz.ogg
+/home/bennett/Music/The Dave Brubeck Quartet/Time Out/7 Pick Up Sticks.ogg
+/home/bennett/Music/The Dave Brubeck Quartet/Time Out/1 Blue Rondo A La Turk.ogg
+/home/bennett/Music/The Dave Brubeck Quartet/Time Out/4 Three To Get Ready.ogg
+
+== 18. Archives and Unauthorized Tool Sources ==
+
+== 19. Installed Software Review ==
+
+== 20. Persistence Checks ==
+
+== 21. Sudoers ==
+44:root	ALL=(ALL:ALL) ALL
+47:%admin ALL=(ALL) ALL
+50:%sudo	ALL=(ALL:ALL) ALL
+4:ALL ALL = NOPASSWD:/usr/bin/mint-refresh-cache
+5:ALL ALL = NOPASSWD:/usr/lib/linuxmint/mintUpdate/synaptic-workaround.py
+6:ALL ALL = NOPASSWD:/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+3:ALL ALL = NOPASSWD:/usr/bin/mintdrivers-remove-live-media
+
+== 22. File Permissions ==
+
+== 23. Critical Service Configuration ==
+
+== 24. Login and Authentication ==
+
+== 25. Processes ==
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.5  0.2 167528 10944 ?        Ss   02:11   0:14 /lib/systemd/systemd --system --deserialize 25 splash
+root           2  0.0  0.0      0     0 ?        S    02:11   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   02:11   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   02:11   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   02:11   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   02:11   0:00 [netns]
+root           8  0.0  0.0      0     0 ?        I<   02:11   0:00 [kworker/0:0H-events_highpri]
+root          10  0.0  0.0      0     0 ?        I<   02:11   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        S    02:11   0:00 [rcu_tasks_rude_]
+root          12  0.0  0.0      0     0 ?        S    02:11   0:00 [rcu_tasks_trace]
+root          13  0.0  0.0      0     0 ?        S    02:11   0:00 [ksoftirqd/0]
+root          14  0.0  0.0      0     0 ?        I    02:11   0:00 [rcu_sched]
+root          15  0.0  0.0      0     0 ?        S    02:11   0:00 [migration/0]
+root          16  0.0  0.0      0     0 ?        S    02:11   0:00 [idle_inject/0]
+root          18  0.0  0.0      0     0 ?        S    02:11   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    02:11   0:00 [cpuhp/1]
+root          20  0.0  0.0      0     0 ?        S    02:11   0:00 [idle_inject/1]
+root          21  0.0  0.0      0     0 ?        S    02:11   0:00 [migration/1]
+root          22  0.0  0.0      0     0 ?        S    02:11   0:02 [ksoftirqd/1]
+root          24  0.0  0.0      0     0 ?        I<   02:11   0:00 [kworker/1:0H-events_highpri]
+root          25  0.0  0.0      0     0 ?        S    02:11   0:00 [kdevtmpfs]
+root          26  0.0  0.0      0     0 ?        I<   02:11   0:00 [inet_frag_wq]
+root          27  0.0  0.0      0     0 ?        S    02:11   0:00 [kauditd]
+root          29  0.0  0.0      0     0 ?        S    02:11   0:00 [khungtaskd]
+root          30  0.0  0.0      0     0 ?        S    02:11   0:00 [oom_reaper]
+root          31  0.0  0.0      0     0 ?        I<   02:11   0:00 [writeback]
+root          32  0.0  0.0      0     0 ?        S    02:11   0:00 [kcompactd0]
+root          33  0.0  0.0      0     0 ?        SN   02:11   0:00 [ksmd]
+root          34  0.0  0.0      0     0 ?        SN   02:11   0:00 [khugepaged]
+root          81  0.0  0.0      0     0 ?        I<   02:11   0:00 [kintegrityd]
+root          82  0.0  0.0      0     0 ?        I<   02:11   0:00 [kblockd]
+root          83  0.0  0.0      0     0 ?        I<   02:11   0:00 [blkcg_punt_bio]
+root          85  0.0  0.0      0     0 ?        I<   02:11   0:00 [tpm_dev_wq]
+root          86  0.0  0.0      0     0 ?        I<   02:11   0:00 [ata_sff]
+root          87  0.0  0.0      0     0 ?        I<   02:11   0:00 [md]
+root          88  0.0  0.0      0     0 ?        I<   02:11   0:00 [edac-poller]
+root          89  0.0  0.0      0     0 ?        I<   02:11   0:00 [devfreq_wq]
+root          90  0.0  0.0      0     0 ?        S    02:11   0:00 [watchdogd]
+root          91  0.1  0.0      0     0 ?        I<   02:11   0:03 [kworker/1:1H-kblockd]
+root          93  0.1  0.0      0     0 ?        S    02:11   0:04 [kswapd0]
+root          94  0.0  0.0      0     0 ?        S    02:11   0:00 [ecryptfs-kthrea]
+root          96  0.0  0.0      0     0 ?        I<   02:11   0:00 [kthrotld]
+root          97  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/24-pciehp]
+root          98  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/25-pciehp]
+root          99  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/26-pciehp]
+root         100  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/27-pciehp]
+root         101  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/28-pciehp]
+root         102  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/29-pciehp]
+root         103  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/30-pciehp]
+root         104  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/31-pciehp]
+root         105  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/32-pciehp]
+root         106  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/33-pciehp]
+root         107  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/34-pciehp]
+root         108  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/35-pciehp]
+root         109  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/36-pciehp]
+root         110  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/37-pciehp]
+root         111  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/38-pciehp]
+root         112  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/39-pciehp]
+root         113  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/40-pciehp]
+root         114  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/41-pciehp]
+root         115  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/42-pciehp]
+root         116  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/43-pciehp]
+root         117  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/44-pciehp]
+root         118  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/45-pciehp]
+root         119  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/46-pciehp]
+root         120  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/47-pciehp]
+root         121  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/48-pciehp]
+root         122  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/49-pciehp]
+root         123  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/50-pciehp]
+root         124  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/51-pciehp]
+root         125  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/52-pciehp]
+root         126  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/53-pciehp]
+root         127  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/54-pciehp]
+root         128  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/55-pciehp]
+root         129  0.0  0.0      0     0 ?        I<   02:11   0:00 [acpi_thermal_pm]
+root         132  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_0]
+root         133  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_0]
+root         134  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_1]
+root         135  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_1]
+root         136  0.0  0.0      0     0 ?        I<   02:11   0:00 [vfio-irqfd-clea]
+root         137  0.0  0.0      0     0 ?        I<   02:11   0:00 [mld]
+root         138  0.1  0.0      0     0 ?        I<   02:11   0:03 [kworker/0:1H-kblockd]
+root         139  0.0  0.0      0     0 ?        I<   02:11   0:00 [ipv6_addrconf]
+root         150  0.0  0.0      0     0 ?        I<   02:11   0:00 [kstrp]
+root         153  0.0  0.0      0     0 ?        I<   02:11   0:00 [zswap-shrink]
+root         155  0.0  0.0      0     0 ?        I<   02:11   0:00 [kworker/u257:0]
+root         160  0.0  0.0      0     0 ?        I<   02:11   0:00 [charger_manager]
+root         206  0.0  0.0      0     0 ?        I<   02:11   0:00 [mpt_poll_0]
+root         207  0.0  0.0      0     0 ?        I<   02:11   0:00 [mpt/0]
+root         208  0.0  0.0      0     0 ?        I<   02:11   0:00 [cryptd]
+root         222  0.0  0.0      0     0 ?        I<   02:11   0:00 [ttm_swap]
+root         226  0.0  0.0      0     0 ?        S    02:11   0:00 [irq/16-vmwgfx]
+root         229  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_2]
+root         231  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_2]
+root         232  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_3]
+root         234  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_3]
+root         235  0.0  0.0      0     0 ?        S    02:11   0:00 [card0-crtc0]
+root         236  0.0  0.0      0     0 ?        S    02:11   0:00 [card0-crtc1]
+root         237  0.0  0.0      0     0 ?        S    02:11   0:00 [card0-crtc2]
+root         238  0.0  0.0      0     0 ?        S    02:11   0:00 [card0-crtc3]
+root         239  0.0  0.0      0     0 ?        S    02:11   0:00 [card0-crtc4]
+root         240  0.0  0.0      0     0 ?        S    02:11   0:00 [card0-crtc5]
+root         241  0.0  0.0      0     0 ?        S    02:11   0:00 [card0-crtc6]
+root         242  0.0  0.0      0     0 ?        S    02:11   0:00 [card0-crtc7]
+root         243  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_4]
+root         245  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_4]
+root         246  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_5]
+root         248  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_5]
+root         250  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_6]
+root         251  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_6]
+root         253  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_7]
+root         255  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_7]
+root         258  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_8]
+root         259  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_8]
+root         260  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_9]
+root         261  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_9]
+root         262  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_10]
+root         263  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_10]
+root         264  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_11]
+root         265  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_11]
+root         266  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_12]
+root         267  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_12]
+root         268  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_13]
+root         269  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_13]
+root         270  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_14]
+root         271  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_14]
+root         272  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_15]
+root         273  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_15]
+root         274  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_16]
+root         275  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_16]
+root         276  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_17]
+root         277  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_17]
+root         278  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_18]
+root         279  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_18]
+root         280  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_19]
+root         281  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_19]
+root         282  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_20]
+root         283  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_20]
+root         284  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_21]
+root         285  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_21]
+root         286  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_22]
+root         287  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_22]
+root         288  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_23]
+root         289  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_23]
+root         290  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_24]
+root         291  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_24]
+root         292  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_25]
+root         293  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_25]
+root         294  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_26]
+root         295  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_26]
+root         296  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_27]
+root         297  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_27]
+root         298  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_28]
+root         299  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_28]
+root         300  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_29]
+root         301  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_29]
+root         302  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_30]
+root         303  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_30]
+root         304  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_31]
+root         305  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_31]
+root         329  0.0  0.0      0     0 ?        I    02:11   0:00 [kworker/u256:29-flush-8:0]
+root         332  0.0  0.0      0     0 ?        S    02:11   0:00 [scsi_eh_32]
+root         333  0.0  0.0      0     0 ?        I<   02:11   0:00 [scsi_tmf_32]
+root         408  0.1  0.0      0     0 ?        S    02:11   0:03 [jbd2/sda3-8]
+root         409  0.0  0.0      0     0 ?        I<   02:11   0:00 [ext4-rsv-conver]
+root         652  0.0  0.0      0     0 ?        S<   02:11   0:00 [spl_system_task]
+root         653  0.0  0.0      0     0 ?        S<   02:11   0:00 [spl_delay_taskq]
+root         654  0.0  0.0      0     0 ?        S<   02:11   0:00 [spl_dynamic_tas]
+root         655  0.0  0.0      0     0 ?        S<   02:11   0:00 [spl_kmem_cache]
+root         656  0.0  0.0      0     0 ?        S<   02:11   0:00 [zvol]
+root         657  0.0  0.0      0     0 ?        S    02:11   0:00 [arc_prune]
+root         658  0.0  0.0      0     0 ?        S    02:11   0:00 [arc_evict]
+root         659  0.0  0.0      0     0 ?        SN   02:11   0:00 [arc_reap]
+root         660  0.0  0.0      0     0 ?        S    02:11   0:00 [dbu_evict]
+root         661  0.0  0.0      0     0 ?        SN   02:11   0:00 [dbuf_evict]
+root         662  0.0  0.0      0     0 ?        SN   02:11   0:00 [z_vdev_file]
+root         663  0.0  0.0      0     0 ?        S    02:11   0:00 [l2arc_feed]
+root         714  0.0  0.0   2812  1084 ?        Ss   02:11   0:00 /usr/sbin/acpid
+root         718  0.0  0.0   9492  2708 ?        Ss   02:11   0:00 /usr/sbin/cron -f -P
+root         727  0.0  0.0  82828  3236 ?        Ssl  02:11   0:00 /usr/sbin/irqbalance --foreground
+root         738  0.0  0.3  41028 14400 ?        Ss   02:11   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         759  0.0  0.1 236380  5112 ?        Ssl  02:11   0:00 /usr/libexec/switcheroo-control
+root         764  0.0  0.1  15552  5008 ?        Ss   02:11   0:00 /lib/systemd/systemd-logind
+root         900  0.0  0.1 306876  5032 ?        Ssl  02:11   0:00 /usr/sbin/lightdm
+root         930  0.7  3.3 609024 133856 tty7    Rsl+ 02:11   0:21 /usr/lib/xorg/Xorg -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+root         931  0.0  0.0   8772   960 tty1     Ss+  02:11   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root        1010  0.0  0.1 164596  5932 ?        Sl   02:11   0:00 lightdm --session-child 12 15
+root        1145  0.0  0.1  83676  7208 ?        Ss   02:11   0:00 /opt/CyberPatriot/CCSClient
+root        1569  0.0  0.1 242248  5596 ?        Ssl  02:11   0:00 /usr/libexec/upowerd
+root        1584  0.0  0.0   2792   940 ?        Ss   02:11   0:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1014/doc
+root        2225  0.0  0.0  14860  3412 ?        S    02:12   0:00 /usr/sbin/CRON -f -P
+root        2226  0.0  0.0   2888   928 ?        Ss   02:12   0:00 /bin/sh -c python3 /usr/share/zod/kneelB4zod.py
+root        2227  0.0  0.1  20016  5304 ?        S    02:12   0:00 python3 /usr/share/zod/kneelB4zod.py
+root       14022  0.0  0.0      0     0 ?        I    02:17   0:00 [kworker/1:0-events]
+root       14034  0.0  0.0      0     0 ?        I    02:17   0:00 [kworker/0:2-events]
+root       14365  0.0  0.3  48112 13036 ?        S<s  02:17   0:00 /lib/systemd/systemd-journald
+root       14442  0.0  0.2 238904 11212 ?        Ssl  02:17   0:01 /usr/libexec/polkitd --no-debug
+root       32348  0.0  0.0  16516  3608 ?        Ss   02:18   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root       32651  0.0  0.1  26100  4868 ?        Ss   02:18   0:00 /lib/systemd/systemd-udevd
+root       32794  0.0  0.0  10160  3176 ?        Ss   02:18   0:00 /usr/sbin/vsftpd /etc/vsftpd.conf
+root       33133  0.0  0.1 240136  6412 ?        Ssl  02:18   0:00 /usr/libexec/accounts-daemon
+root       33909  0.0  0.3 548420 14724 ?        Ssl  02:18   0:00 /usr/sbin/NetworkManager --no-daemon
+root       34380  0.0  0.1  53776  7484 ?        Ss   02:18   0:00 /usr/bin/VGAuthService
+root       34382  0.1  0.1 169932  6528 ?        Ssl  02:18   0:02 /usr/bin/vmtoolsd
+root       34426  0.0  0.2 318372  8588 ?        Ssl  02:18   0:00 /usr/sbin/ModemManager
+root       34905  0.0  0.0 152564   248 ?        Ssl  02:19   0:00 vmware-vmblock-fuse /run/vmblock-fuse -o rw,subtype=vmware-vmblock,default_permissions,allow_other,dev,suid
+root       35266  0.0  0.3 298752 14996 ?        Ssl  02:19   0:00 /usr/libexec/packagekitd
+root       35397  0.0  0.3 402072 14296 ?        Ssl  02:19   0:00 /usr/libexec/fwupd/fwupd
+root       35515  0.0  0.2 393284 10072 ?        Ssl  02:19   0:00 /usr/libexec/udisks2/udisksd
+root       35942  0.0  0.1 101284  4488 ?        Ssl  02:19   0:00 /usr/sbin/zed -F
+root       68283  0.0  0.0      0     0 ?        I<   02:19   0:00 [xfsalloc]
+root       68284  0.0  0.0      0     0 ?        I<   02:19   0:00 [xfs_mru_cache]
+root       68288  0.0  0.0      0     0 ?        S    02:19   0:00 [jfsIO]
+root       68289  0.0  0.0      0     0 ?        S    02:19   0:00 [jfsCommit]
+root       68290  0.0  0.0      0     0 ?        S    02:19   0:00 [jfsCommit]
+root       68291  0.0  0.0      0     0 ?        S    02:19   0:00 [jfsSync]
+root       69874  0.0  0.0      0     0 ?        I    02:25   0:00 [kworker/1:1-events]
+root       70541  0.0  0.0      0     0 ?        I    02:26   0:00 [kworker/0:1-events]
+root       70691  0.0  0.0      0     0 ?        I    02:33   0:00 [kworker/u256:0-events_unbound]
+root       70692  0.0  0.0      0     0 ?        I    02:33   0:00 [kworker/u256:1-events_unbound]
+root       70891  0.0  0.1  16204  6500 pts/0    R+   02:50   0:00 sudo ./Hardener_v2.sh
+root       70892  0.0  0.0  16204  1100 pts/1    Ss   02:50   0:00 sudo ./Hardener_v2.sh
+root       70893  0.0  0.1  10236  4220 pts/1    S+   02:50   0:00 bash ./Hardener_v2.sh
+root       71462  0.0  0.0      0     0 ?        I    02:54   0:00 [kworker/1:2-events]
+root       71558  0.0  0.0      0     0 ?        I    02:54   0:00 [kworker/0:0-cgroup_destroy]
+root       71830  0.0  0.0      0     0 ?        I    02:54   0:00 [kworker/0:3]
+root       72528  0.0  0.0      0     0 ?        I    02:54   0:00 [kworker/u256:2-flush-8:0]
+root       73593  0.0  0.0  12680  3528 pts/1    R+   02:57   0:00 ps -U root -u root u
+root       73594  0.0  0.0   8380  1020 pts/1    R+   02:57   0:00 tee -a /root/cp-hardener-20261006_025056/report.txt
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         930  0.7  3.3 609024 133856 tty7    Ssl+ 02:11   0:21 /usr/lib/xorg/Xorg -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+root           1  0.5  0.2 167528 10944 ?        Ss   02:11   0:14 /lib/systemd/systemd --system --deserialize 25 splash
+chowe       1840  0.4  3.1 34284580 126680 ?     SLl  02:11   0:12 /usr/lib/chromium/chromium --disable-features=TFLiteLanguageDetectionEnabled,GlobalVaapiLock --ozone-platform-hint=auto --use-gl=angle --use-angle=gl --enable-features=VaapiVideoDecoder,VaapiVideoEncoder,VaapiVideoDecodeLinuxGL,UseChromeOSDirectVideoDecoder --video-capture-use-gpu-memory-buffer --enable-native-gpu-memory-buffers --enable-gpu-rasterization --disable-pings --no-pings https://www.uscyberpatriot.org/competition/scenario/390849r4g8oab/
+chowe       1873  0.2  2.3 34273120 94720 ?      Sl   02:11   0:07 /usr/lib/chromium/chromium --type=gpu-process --enable-gpu-rasterization --ozone-platform=x11 --use-angle=gl --crashpad-handler-pid=1843 --enable-crash-reporter=,for Linux Mint --change-stack-guard-on-fork=enable --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAEAAAA4AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAGAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --use-gl=angle --shared-files --field-trial-handle=3,i,10410231510311406183,4472628330344069713,262144 --enable-features=UseChromeOSDirectVideoDecoder,VaapiVideoDecodeLinuxGL,VaapiVideoDecoder,VaapiVideoEncoder --disable-features=GlobalVaapiLock,TFLiteLanguageDetectionEnabled --variations-seed-version
+root          91  0.1  0.0      0     0 ?        I<   02:11   0:03 [kworker/1:1H-kblockd]
+root          93  0.1  0.0      0     0 ?        S    02:11   0:04 [kswapd0]
+root         138  0.1  0.0      0     0 ?        I<   02:11   0:03 [kworker/0:1H-kblockd]
+root         408  0.1  0.0      0     0 ?        S    02:11   0:03 [jbd2/sda3-8]
+message+     719  0.1  0.1  10264  5652 ?        Ss   02:11   0:03 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+chowe       1416  0.1  0.6 469588 25904 ?        Sl   02:11   0:03 marco --composite --replace
+chowe       2196  0.1  0.4 480564 16892 ?        Sl   02:12   0:03 mintreport-tray
+chowe       2214  0.1  1.8 1187014376 72612 ?    Sl   02:12   0:04 /usr/lib/chromium/chromium --type=renderer --crashpad-handler-pid=1843 --enable-crash-reporter=,for Linux Mint --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --video-capture-use-gpu-memory-buffer --ozone-platform=x11 --disable-gpu-compositing --lang=en-US --num-raster-threads=1 --renderer-client-id=9 --time-ticks-at-unix-epoch=-1791252665403346 --disable-video-capture-use-gpu-memory-buffer --launch-time-ticks=56435524 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,10410231510311406183,4472628330344069713,262144 --enable-features=UseChromeOSDirectVideoDecoder,VaapiVideoDecodeLinuxGL,VaapiVideoDecoder,VaapiVideoEncoder --disable-features=GlobalVaapiLock,TFLiteLanguageDetectionEnabled --variations-seed-version
+root       34382  0.1  0.1 169932  6528 ?        Ssl  02:18   0:02 /usr/bin/vmtoolsd
+chowe      68521  0.1  4.5 1187041968 178796 ?   Sl   02:20   0:04 /usr/lib/chromium/chromium --type=renderer --crashpad-handler-pid=1843 --enable-crash-reporter=,for Linux Mint --origin-trial-disabled-features=CanvasTextNg|WebAssemblyCustomDescriptors --change-stack-guard-on-fork=enable --video-capture-use-gpu-memory-buffer --ozone-platform=x11 --disable-gpu-compositing --lang=en-US --num-raster-threads=1 --renderer-client-id=22 --time-ticks-at-unix-epoch=-1791252665403346 --disable-video-capture-use-gpu-memory-buffer --launch-time-ticks=594441066 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,10410231510311406183,4472628330344069713,262144 --enable-features=UseChromeOSDirectVideoDecoder,VaapiVideoDecodeLinuxGL,VaapiVideoDecoder,VaapiVideoEncoder --disable-features=GlobalVaapiLock,TFLiteLanguageDetectionEnabled --variations-seed-version
+root           2  0.0  0.0      0     0 ?        S    02:11   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   02:11   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   02:11   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   02:11   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   02:11   0:00 [netns]
+root           8  0.0  0.0      0     0 ?        I<   02:11   0:00 [kworker/0:0H-events_highpri]
+root          10  0.0  0.0      0     0 ?        I<   02:11   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        S    02:11   0:00 [rcu_tasks_rude_]
+root          12  0.0  0.0      0     0 ?        S    02:11   0:00 [rcu_tasks_trace]
+root          13  0.0  0.0      0     0 ?        S    02:11   0:00 [ksoftirqd/0]
+/proc/1024/exe -> /usr/lib/systemd/systemd (deleted)
+/proc/1033/exe -> /usr/lib/systemd/systemd (deleted)
+/proc/1102/exe -> /usr/bin/pipewire (deleted)
+/proc/1105/exe -> /usr/bin/pulseaudio (deleted)
+/proc/1200/exe -> /usr/libexec/gvfsd (deleted)
+/proc/1208/exe -> /usr/libexec/gvfsd-fuse (deleted)
+/proc/1385/exe -> /usr/libexec/dconf-service (deleted)
+/proc/1432/exe -> /usr/libexec/gvfs-udisks2-volume-monitor (deleted)
+/proc/1440/exe -> /usr/libexec/gvfs-goa-volume-monitor (deleted)
+/proc/1444/exe -> /usr/libexec/gvfs-mtp-volume-monitor (deleted)
+/proc/1448/exe -> /usr/libexec/gvfs-gphoto2-volume-monitor (deleted)
+/proc/1452/exe -> /usr/libexec/gvfs-afc-volume-monitor (deleted)
+/proc/1462/exe -> /usr/bin/python3.10 (deleted)
+/proc/1471/exe -> /usr/bin/python3.10 (deleted)
+/proc/1493/exe -> /usr/libexec/evolution-data-server/evolution-alarm-notify (deleted)
+/proc/1517/exe -> /usr/bin/vmtoolsd (deleted)
+/proc/1523/exe -> /usr/bin/python3.10 (deleted)
+/proc/1549/exe -> /usr/bin/python3.10 (deleted)
+/proc/1570/exe -> /usr/libexec/xdg-desktop-portal (deleted)
+/proc/1575/exe -> /usr/libexec/xdg-document-portal (deleted)
+/proc/1578/exe -> /usr/libexec/xdg-permission-store (deleted)
+/proc/1675/exe -> /usr/libexec/evolution-source-registry (deleted)
+/proc/1701/exe -> /usr/libexec/evolution-calendar-factory (deleted)
+/proc/1710/exe -> /usr/libexec/evolution-addressbook-factory (deleted)
+/proc/1726/exe -> /usr/lib/bluetooth/obexd (deleted)
+/proc/1733/exe -> /usr/libexec/gvfsd-trash (deleted)
+/proc/1750/exe -> /usr/libexec/gvfsd-metadata (deleted)
+/proc/1834/exe -> /usr/libexec/gvfsd-http (deleted)
+/proc/1840/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/1843/exe -> /usr/lib/chromium/chrome_crashpad_handler (deleted)
+/proc/1845/exe -> /usr/lib/chromium/chrome_crashpad_handler (deleted)
+/proc/1849/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/1850/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/1852/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/1873/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/1877/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/1899/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/2038/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/2196/exe -> /usr/bin/python3.10 (deleted)
+/proc/2214/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/2227/exe -> /usr/bin/python3.10 (deleted)
+/proc/2252/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/3547/exe -> /usr/bin/python3.10 (deleted)
+/proc/3665/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/3675/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/68521/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/68539/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/70633/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/70643/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/70649/exe -> /usr/lib/chromium/chromium (deleted)
+/proc/738/exe -> /usr/bin/python3.10 (deleted)
+/proc/764/exe -> /usr/lib/systemd/systemd-logind (deleted)
+/proc/930/exe -> /usr/lib/xorg/Xorg (deleted)
+/proc/931/exe -> /usr/sbin/agetty (deleted)
+
+== 26. Security Logs ==
+Oct  6 02:21:48 linuxmint su: pam_unix(su:session): session opened for user chowe(uid=1014) by (uid=0)
+Oct  6 02:21:48 linuxmint su: pam_unix(su:session): session closed for user chowe
+Oct  6 02:22:01 linuxmint CRON[68639]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:22:01 linuxmint CRON[68639]: pam_unix(cron:session): session closed for user root
+Oct  6 02:22:13 linuxmint sudo: pam_unix(sudo:auth): authentication failure; logname= uid=1014 euid=0 tty=/dev/pts/0 ruser=chowe rhost=  user=chowe
+Oct  6 02:22:38 linuxmint sudo:    chowe : TTY=pts/0 ; PWD=/home/chowe ; USER=root ; COMMAND=./Hardener.sh
+Oct  6 02:22:38 linuxmint sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1014)
+Oct  6 02:23:01 linuxmint CRON[68672]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:23:01 linuxmint CRON[68672]: pam_unix(cron:session): session closed for user root
+Oct  6 02:23:57 linuxmint gpasswd[68801]: user nova removed by root from group sudo
+Oct  6 02:24:01 linuxmint CRON[68842]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:24:01 linuxmint CRON[68842]: pam_unix(cron:session): session closed for user root
+Oct  6 02:24:10 linuxmint chage[68857]: changed password expiry for albert
+Oct  6 02:24:11 linuxmint chage[68866]: changed password expiry for aria
+Oct  6 02:24:12 linuxmint chage[68875]: changed password expiry for bennett
+Oct  6 02:24:18 linuxmint chage[68886]: changed password expiry for elias
+Oct  6 02:24:19 linuxmint chage[68895]: changed password expiry for ezekiel
+Oct  6 02:24:19 linuxmint chage[68904]: changed password expiry for finn
+Oct  6 02:24:20 linuxmint chage[68913]: changed password expiry for ivy
+Oct  6 02:24:21 linuxmint chage[68922]: changed password expiry for kaia
+Oct  6 02:24:22 linuxmint chage[68931]: changed password expiry for nolan
+Oct  6 02:24:23 linuxmint chage[68940]: changed password expiry for nova
+Oct  6 02:24:23 linuxmint chage[68949]: changed password expiry for quinn
+Oct  6 02:24:24 linuxmint chage[68958]: changed password expiry for rabia
+Oct  6 02:24:25 linuxmint chage[68967]: changed password expiry for reed
+Oct  6 02:24:25 linuxmint chage[68976]: changed password expiry for rowan
+Oct  6 02:24:26 linuxmint chage[68985]: changed password expiry for sienna
+Oct  6 02:24:39 linuxmint sudo:    chowe : PWD=/home/chowe ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+Oct  6 02:24:39 linuxmint sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1014)
+Oct  6 02:24:39 linuxmint sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 02:24:47 linuxmint su: (to chowe) root on none
+Oct  6 02:24:47 linuxmint su: pam_unix(su:session): session opened for user chowe(uid=1014) by (uid=0)
+Oct  6 02:24:47 linuxmint su: pam_unix(su:session): session closed for user chowe
+Oct  6 02:25:01 linuxmint CRON[69843]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:25:01 linuxmint CRON[69843]: pam_unix(cron:session): session closed for user root
+Oct  6 02:25:48 linuxmint su: (to chowe) root on none
+Oct  6 02:25:48 linuxmint su: pam_unix(su:session): session opened for user chowe(uid=1014) by (uid=0)
+Oct  6 02:25:48 linuxmint su: pam_unix(su:session): session closed for user chowe
+Oct  6 02:26:01 linuxmint CRON[70537]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:26:01 linuxmint CRON[70537]: pam_unix(cron:session): session closed for user root
+Oct  6 02:26:09 linuxmint sudo:    chowe : PWD=/home/chowe ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+Oct  6 02:26:09 linuxmint sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1014)
+Oct  6 02:26:09 linuxmint sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 02:26:24 linuxmint sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 02:27:01 linuxmint CRON[70664]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:27:01 linuxmint CRON[70664]: pam_unix(cron:session): session closed for user root
+Oct  6 02:28:01 linuxmint CRON[70670]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:28:01 linuxmint CRON[70670]: pam_unix(cron:session): session closed for user root
+Oct  6 02:29:01 linuxmint CRON[70673]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:29:02 linuxmint CRON[70673]: pam_unix(cron:session): session closed for user root
+Oct  6 02:30:01 linuxmint CRON[70677]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:30:01 linuxmint CRON[70677]: pam_unix(cron:session): session closed for user root
+Oct  6 02:31:01 linuxmint CRON[70680]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:31:01 linuxmint CRON[70680]: pam_unix(cron:session): session closed for user root
+Oct  6 02:32:01 linuxmint CRON[70683]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:32:01 linuxmint CRON[70683]: pam_unix(cron:session): session closed for user root
+Oct  6 02:33:01 linuxmint CRON[70687]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:33:01 linuxmint CRON[70687]: pam_unix(cron:session): session closed for user root
+Oct  6 02:34:01 linuxmint CRON[70693]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:34:01 linuxmint CRON[70693]: pam_unix(cron:session): session closed for user root
+Oct  6 02:35:01 linuxmint CRON[70696]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:35:01 linuxmint CRON[70696]: pam_unix(cron:session): session closed for user root
+Oct  6 02:36:01 linuxmint CRON[70700]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:36:01 linuxmint CRON[70700]: pam_unix(cron:session): session closed for user root
+Oct  6 02:37:01 linuxmint CRON[70704]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:37:01 linuxmint CRON[70704]: pam_unix(cron:session): session closed for user root
+Oct  6 02:38:01 linuxmint CRON[70708]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:38:01 linuxmint CRON[70708]: pam_unix(cron:session): session closed for user root
+Oct  6 02:39:01 linuxmint CRON[70713]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:39:01 linuxmint CRON[70713]: pam_unix(cron:session): session closed for user root
+Oct  6 02:40:01 linuxmint CRON[70717]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:40:01 linuxmint CRON[70717]: pam_unix(cron:session): session closed for user root
+Oct  6 02:41:01 linuxmint CRON[70721]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:41:01 linuxmint CRON[70721]: pam_unix(cron:session): session closed for user root
+Oct  6 02:42:01 linuxmint CRON[70725]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:42:01 linuxmint CRON[70725]: pam_unix(cron:session): session closed for user root
+Oct  6 02:43:01 linuxmint CRON[70729]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:43:01 linuxmint CRON[70729]: pam_unix(cron:session): session closed for user root
+Oct  6 02:44:01 linuxmint CRON[70733]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:44:01 linuxmint CRON[70733]: pam_unix(cron:session): session closed for user root
+Oct  6 02:45:01 linuxmint CRON[70736]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:45:01 linuxmint CRON[70736]: pam_unix(cron:session): session closed for user root
+Oct  6 02:46:01 linuxmint CRON[70740]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:46:01 linuxmint CRON[70740]: pam_unix(cron:session): session closed for user root
+Oct  6 02:47:01 linuxmint CRON[70744]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:47:01 linuxmint CRON[70744]: pam_unix(cron:session): session closed for user root
+Oct  6 02:48:01 linuxmint CRON[70768]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:48:01 linuxmint CRON[70768]: pam_unix(cron:session): session closed for user root
+Oct  6 02:48:27 linuxmint sudo:    chowe : TTY=pts/0 ; PWD=/home/chowe ; USER=root ; COMMAND=./Hardener_v2.sh
+Oct  6 02:48:27 linuxmint sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1014)
+Oct  6 02:48:46 linuxmint sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 02:48:49 linuxmint sudo:    chowe : TTY=pts/0 ; PWD=/home/chowe ; USER=root ; COMMAND=./Hardener_v2.sh
+Oct  6 02:48:49 linuxmint sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1014)
+Oct  6 02:49:01 linuxmint CRON[70835]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:49:01 linuxmint CRON[70835]: pam_unix(cron:session): session closed for user root
+Oct  6 02:50:01 linuxmint CRON[70876]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:50:01 linuxmint CRON[70876]: pam_unix(cron:session): session closed for user root
+Oct  6 02:50:54 linuxmint sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 02:50:56 linuxmint sudo:    chowe : TTY=pts/0 ; PWD=/home/chowe ; USER=root ; COMMAND=./Hardener_v2.sh
+Oct  6 02:50:56 linuxmint sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1014)
+Oct  6 02:51:01 linuxmint CRON[70917]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:51:02 linuxmint CRON[70917]: pam_unix(cron:session): session closed for user root
+Oct  6 02:52:01 linuxmint CRON[70933]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:52:01 linuxmint CRON[70933]: pam_unix(cron:session): session closed for user root
+Oct  6 02:53:01 linuxmint CRON[70983]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:53:01 linuxmint CRON[70983]: pam_unix(cron:session): session closed for user root
+Oct  6 02:53:10 linuxmint groupadd[71142]: group added to /etc/group: name=spider, GID=1000
+Oct  6 02:53:10 linuxmint groupadd[71142]: group added to /etc/gshadow: name=spider
+Oct  6 02:53:10 linuxmint groupadd[71142]: new group: name=spider, GID=1000
+Oct  6 02:53:14 linuxmint gpasswd[71155]: members of group spider set by root to nova,rowan,finn,quinn
+Oct  6 02:53:21 linuxmint passwd[71170]: password for 'root' changed by 'root'
+Oct  6 02:53:26 linuxmint chage[71199]: changed password expiry for albert
+Oct  6 02:53:28 linuxmint chage[71208]: changed password expiry for aria
+Oct  6 02:53:28 linuxmint chage[71217]: changed password expiry for bennett
+Oct  6 02:53:29 linuxmint chage[71227]: changed password expiry for chowe
+Oct  6 02:53:31 linuxmint chage[71236]: changed password expiry for elias
+Oct  6 02:53:31 linuxmint chage[71245]: changed password expiry for ezekiel
+Oct  6 02:53:32 linuxmint chage[71254]: changed password expiry for finn
+Oct  6 02:53:33 linuxmint chage[71263]: changed password expiry for ivy
+Oct  6 02:53:33 linuxmint chage[71272]: changed password expiry for kaia
+Oct  6 02:53:34 linuxmint chage[71282]: changed password expiry for nolan
+Oct  6 02:53:34 linuxmint chage[71291]: changed password expiry for nova
+Oct  6 02:53:35 linuxmint chage[71300]: changed password expiry for quinn
+Oct  6 02:53:35 linuxmint chage[71309]: changed password expiry for rabia
+Oct  6 02:53:38 linuxmint chage[71320]: changed password expiry for rowan
+Oct  6 02:53:39 linuxmint chage[71330]: changed password expiry for sienna
+Oct  6 02:53:48 linuxmint su: pam_unix(su:account): expired password for user chowe (password aged)
+Oct  6 02:53:48 linuxmint su: pam_unix(su:chauthtok): password - (old) token not obtained
+Oct  6 02:53:48 linuxmint su: FAILED SU (to chowe) root on none
+Oct  6 02:54:01 linuxmint CRON[71395]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:54:01 linuxmint CRON[71395]: pam_unix(cron:session): session closed for user root
+Oct  6 02:54:48 linuxmint su: pam_unix(su:account): expired password for user chowe (password aged)
+Oct  6 02:54:48 linuxmint su: pam_unix(su:chauthtok): password - (old) token not obtained
+Oct  6 02:54:48 linuxmint su: FAILED SU (to chowe) root on none
+Oct  6 02:55:01 linuxmint CRON[73101]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:55:01 linuxmint CRON[73101]: pam_unix(cron:session): session closed for user root
+Oct  6 02:56:01 linuxmint CRON[73124]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:56:01 linuxmint CRON[73124]: pam_unix(cron:session): session closed for user root
+Oct  6 02:56:10 linuxmint sudo: pam_unix(sudo:account): expired password for user chowe (password aged)
+Oct  6 02:56:10 linuxmint sudo:    chowe : PWD=/home/chowe ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+Oct  6 02:56:10 linuxmint sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1014)
+Oct  6 02:56:10 linuxmint sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 02:56:49 linuxmint su: pam_unix(su:account): expired password for user chowe (password aged)
+Oct  6 02:56:49 linuxmint su: pam_unix(su:chauthtok): password - (old) token not obtained
+Oct  6 02:56:49 linuxmint su: FAILED SU (to chowe) root on none
+Oct  6 02:56:56 linuxmint userdel[73309]: delete user 'tcpdump'
+Oct  6 02:56:56 linuxmint userdel[73309]: removed group 'tcpdump' owned by 'tcpdump'
+Oct  6 02:56:56 linuxmint userdel[73309]: removed shadow group 'tcpdump' owned by 'tcpdump'
+Oct  6 02:57:01 linuxmint CRON[73558]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct  6 02:57:01 linuxmint CRON[73558]: pam_unix(cron:session): session closed for user root
+  UNIT                    LOAD   ACTIVE SUB    DESCRIPTION
+● casper-md5check.service loaded failed failed casper-md5check Verify Live ISO checksums
+● squid.service           loaded failed failed Squid Web Proxy Server
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+2 loaded units listed.
+
+== 27. Final Verification ==
+
+== 28. Manual Checks Still Required ==
+[ ] Re-read every Forensics Question before deleting evidence.
+[ ] Re-read README after completing automated checks.
+[ ] Confirm EVERY authorized user and administrator.
+[ ] Confirm README-requested groups and exact memberships.
+[ ] Confirm critical services remain running.
+[ ] Confirm files required by FTP/web/Samba services remain intact.
+[ ] Inspect every unexplained listening port.
+[ ] Inspect unusual low-UID accounts with login shells/home directories.
+[ ] Inspect cron jobs, timers, startup files, and autostart entries.
+[ ] Inspect strange Python/Perl/Ruby/PHP/shell scripts.
+[ ] Inspect archives under /usr/games, /opt, /usr/local, /tmp, and /var/tmp.
+[ ] Inspect unauthorized/security-testing tools not required by README.
+[ ] Inspect world-writable files/directories.
+[ ] Inspect unusual SUID/SGID binaries.
+[ ] Inspect browser extensions/settings if relevant.
+[ ] Inspect FTP, SSH, Apache, Samba, DNS, mail, or other required service configs.
+[ ] Verify software updates completed successfully.
+[ ] Check the CyberPatriot scoring report after each major change.
+[ ] Stop if points decrease and use backups/logs to determine why.
