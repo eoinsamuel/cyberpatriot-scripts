@@ -1,0 +1,588 @@
+[33mWARNING:[0m READ FORENSICS QUESTIONS BEFORE CHANGING THE IMAGE.
+[33mWARNING:[0m READ THE README BEFORE CHANGING USERS, GROUPS, SERVICES, OR FILES.
+[33mWARNING:[0m Never modify /opt/CyberPatriot or scoring-related files.
+
+== 1. System Information ==
+Distribution: Linux Mint 21.3
+Hostname: linuxmint
+Kernel: 5.15.0-91-generic
+Date: 2026-10-06T02:50:56+00:00
+
+== 2. Scenario Inputs From README ==
+
+== 3. Baseline Snapshot ==
+[32mOK:[0m Baseline saved to /root/cp-hardener-20261006_025056/baseline.txt
+
+== 4. Users and Administrators ==
+[36mINFO:[0m Checking normal users AND suspicious login-capable low-UID accounts.
+
+== 5. README-Required Groups ==
+[33mWARNING:[0m Required group 'spider' does not exist.
++ addgroup
+spider
+Adding group `spider' (GID 1000) ...
+Done.
+[36mINFO:[0m Required members: nova,rowan,finn,quinn
++ gpasswd
+-M
+nova,rowan,finn,quinn
+spider
+
+== 6. Root and Empty Passwords ==
+[33mWARNING:[0m ROOT PASSWORD IS BLANK.
++ passwd
+-l
+root
+passwd: password expiry information changed.
+[32mOK:[0m No blank password hashes detected.
+
+== 7. Password Aging ==
+Backed up /etc/login.defs -> /root/cp-hardener-20261006_025056/backups/etc/login.defs
++ chage
+-M
+90
+-m
+1
+-W
+7
+albert
++ chage
+-M
+90
+-m
+1
+-W
+7
+aria
++ chage
+-M
+90
+-m
+1
+-W
+7
+bennett
++ chage
+-M
+90
+-m
+1
+-W
+7
+chowe
++ chage
+-M
+90
+-m
+1
+-W
+7
+elias
++ chage
+-M
+90
+-m
+1
+-W
+7
+ezekiel
++ chage
+-M
+90
+-m
+1
+-W
+7
+finn
++ chage
+-M
+90
+-m
+1
+-W
+7
+ivy
++ chage
+-M
+90
+-m
+1
+-W
+7
+kaia
++ chage
+-M
+90
+-m
+1
+-W
+7
+nolan
++ chage
+-M
+90
+-m
+1
+-W
+7
+nova
++ chage
+-M
+90
+-m
+1
+-W
+7
+quinn
++ chage
+-M
+90
+-m
+1
+-W
+7
+rabia
++ chage
+-M
+90
+-m
+1
+-W
+7
+rowan
++ chage
+-M
+90
+-m
+1
+-W
+7
+sienna
+
+== 8. PAM Minimum Password Length ==
+[33mWARNING:[0m pam_unix does not specify minlen.
+Backed up /etc/pam.d/common-password -> /root/cp-hardener-20261006_025056/backups/etc/pam.d/common-password
+
+== 9. PAM Null Password Authentication ==
+[33mWARNING:[0m Found null-password options:
+Backed up /etc/pam.d/common-auth -> /root/cp-hardener-20261006_025056/backups/etc/pam.d/common-auth
+[32mOK:[0m Removed null-password PAM options.
+
+== 10. Account Lockout / pam_faillock ==
+[33mWARNING:[0m pam_faillock configuration was not detected.
+[33mWARNING:[0m pam-auth-update will open an interactive menu.
+[33mWARNING:[0m Select ALL THREE:
+[33mWARNING:[0m pam_faillock is still not present in common-auth. Re-run pam-auth-update and verify selections.
+
+== 11. Kernel Network Hardening ==
+[33mWARNING:[0m IPv4 TCP SYN cookies are not enabled.
+Backed up /etc/sysctl.d/99-cyberpatriot-hardening.conf -> /root/cp-hardener-20261006_025056/backups/etc/sysctl.d/99-cyberpatriot-hardening.conf
++ sysctl
+--system
+* Applying /etc/sysctl.d/10-console-messages.conf ...
+kernel.printk = 4 4 1 7
+* Applying /etc/sysctl.d/10-ipv6-privacy.conf ...
+net.ipv6.conf.all.use_tempaddr = 2
+net.ipv6.conf.default.use_tempaddr = 2
+* Applying /etc/sysctl.d/10-kernel-hardening.conf ...
+kernel.kptr_restrict = 1
+* Applying /etc/sysctl.d/10-magic-sysrq.conf ...
+kernel.sysrq = 176
+* Applying /etc/sysctl.d/10-network-security.conf ...
+net.ipv4.conf.default.rp_filter = 2
+net.ipv4.conf.all.rp_filter = 2
+* Applying /etc/sysctl.d/10-ptrace.conf ...
+kernel.yama.ptrace_scope = 1
+* Applying /etc/sysctl.d/10-zeropage.conf ...
+vm.mmap_min_addr = 65536
+* Applying /usr/lib/sysctl.d/50-bubblewrap.conf ...
+kernel.unprivileged_userns_clone = 1
+* Applying /usr/lib/sysctl.d/50-coredump.conf ...
+kernel.core_pattern = |/lib/systemd/systemd-coredump %P %u %g %s %t 9223372036854775808 %h %d
+kernel.core_pipe_limit = 16
+fs.suid_dumpable = 2
+* Applying /usr/lib/sysctl.d/50-default.conf ...
+kernel.core_uses_pid = 1
+net.ipv4.conf.default.rp_filter = 2
+net.ipv4.conf.default.accept_source_route = 0
+sysctl: setting key "net.ipv4.conf.all.accept_source_route": Invalid argument
+net.ipv4.conf.default.promote_secondaries = 1
+sysctl: setting key "net.ipv4.conf.all.promote_secondaries": Invalid argument
+net.ipv4.ping_group_range = 0 2147483647
+net.core.default_qdisc = fq_codel
+fs.protected_hardlinks = 1
+fs.protected_symlinks = 1
+fs.protected_regular = 1
+fs.protected_fifos = 1
+* Applying /usr/lib/sysctl.d/50-mint.conf ...
+kernel.dmesg_restrict = 0
+* Applying /usr/lib/sysctl.d/50-pid-max.conf ...
+kernel.pid_max = 4194304
+* Applying /etc/sysctl.d/99-cyberpatriot-hardening.conf ...
+net.ipv4.tcp_syncookies = 1
+net.ipv4.ip_forward = 0
+net.ipv4.conf.all.accept_redirects = 0
+net.ipv4.conf.default.accept_redirects = 0
+net.ipv4.conf.all.send_redirects = 0
+net.ipv4.conf.all.accept_source_route = 0
+net.ipv4.conf.default.accept_source_route = 0
+net.ipv4.icmp_echo_ignore_broadcasts = 1
+net.ipv4.conf.all.rp_filter = 1
+net.ipv4.conf.default.rp_filter = 1
+* Applying /usr/lib/sysctl.d/99-protect-links.conf ...
+fs.protected_fifos = 1
+fs.protected_hardlinks = 1
+fs.protected_regular = 2
+fs.protected_symlinks = 1
+* Applying /etc/sysctl.d/99-sysctl.conf ...
+kernel.randomize_va_space = 0
+net.ipv4.tcp_syncookies = 0
+* Applying /etc/sysctl.conf ...
+kernel.randomize_va_space = 0
+net.ipv4.tcp_syncookies = 0
+[33mWARNING:[0m Do NOT disable ip_forward if the README explicitly says this host is acting as a router.
+
+== 12. Firewall ==
++ ufw
+default
+deny
+incoming
+Default incoming policy changed to 'deny'
+(be sure to update your rules accordingly)
++ ufw
+default
+allow
+outgoing
+Default outgoing policy changed to 'allow'
+(be sure to update your rules accordingly)
++ ufw
+--force
+enable
+Firewall is active and enabled on system startup
++ ufw
+status
+verbose
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+== 13. Services ==
+[33mWARNING:[0m squid.service is active/enabled but is NOT listed as required.
++ systemctl
+disable
+--now
+squid.service
+Synchronizing state of squid.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable squid
+Removed /etc/systemd/system/multi-user.target.wants/squid.service.
+[32mOK:[0m vsftpd.service is marked required.
+
+== 14. Package Updates ==
++ apt-get
+update
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Ign:2 http://packages.linuxmint.com virginia InRelease
+Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:5 http://packages.linuxmint.com virginia Release
+Hit:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [3,633 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/main i386 Packages [924 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1,052 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/universe i386 Packages [711 kB]
+Fetched 6,449 kB in 1s (6,426 kB/s)
+Reading package lists...
+[36mINFO:[0m During config-file prompts, preserving the local config is often safer unless you know the maintainer version is needed.
++ env
+DEBIAN_FRONTEND=readline
+apt-get
+full-upgrade
+-y
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following package was automatically installed and is no longer required:
+  libglew2.2
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+== 15. SSH Hardening ==
+[31mERROR:[0m SSH config invalid. Restoring previous state.
+[33mWARNING:[0m PasswordAuthentication is intentionally NOT changed automatically.
+
+== 16. Listening Ports and Backdoor Hunting ==
+[33mWARNING:[0m Investigate every unexplained listener before deleting anything.
+
+== 17. Prohibited Media ==
+[36mINFO:[0m No prohibited extensions were entered.
+
+== 18. Archives and Unauthorized Tool Sources ==
+[33mWARNING:[0m Archives in /usr/games, /opt, /usr/local, or unusual locations deserve special attention.
+
+== 19. Installed Software Review ==
++ apt-get
+purge
+-y
+doona
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following package was automatically installed and is no longer required:
+  libglew2.2
+Use 'sudo apt autoremove' to remove it.
+The following packages will be REMOVED:
+  doona*
+0 upgraded, 0 newly installed, 1 to remove and 0 not upgraded.
+After this operation, 133 kB disk space will be freed.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 615556 files and directories currently installed.)
+Removing doona (1.0+git20190108-1) ...
+Processing triggers for man-db (2.10.2-1) ...
++ apt-get
+purge
+-y
+xprobe
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following package was automatically installed and is no longer required:
+  libglew2.2
+Use 'sudo apt autoremove' to remove it.
+The following packages will be REMOVED:
+  xprobe*
+0 upgraded, 0 newly installed, 1 to remove and 0 not upgraded.
+After this operation, 1,004 kB disk space will be freed.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 615524 files and directories currently installed.)
+Removing xprobe (0.3-5) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for doc-base (0.11.1) ...
+Processing 1 removed doc-base file...
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 615510 files and directories currently installed.)
+Purging configuration files for xprobe (0.3-5) ...
++ apt-get
+purge
+-y
+netcat-openbsd
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ mintsources : Depends: mint-common (>= 2) but it is not going to be installed
+               Depends: gir1.2-xapp-1.0 but it is not going to be installed
+E: Error, pkgProblemResolver::Resolve generated breaks, this may be caused by held packages.
++ apt-get
+purge
+-y
+tcpdump
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following package was automatically installed and is no longer required:
+  libglew2.2
+Use 'sudo apt autoremove' to remove it.
+The following packages will be REMOVED:
+  tcpdump*
+0 upgraded, 0 newly installed, 1 to remove and 0 not upgraded.
+After this operation, 1,407 kB disk space will be freed.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 615508 files and directories currently installed.)
+Removing tcpdump (4.99.1-3ubuntu0.2) ...
+Processing triggers for man-db (2.10.2-1) ...
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 615495 files and directories currently installed.)
+Purging configuration files for tcpdump (4.99.1-3ubuntu0.2) ...
++ apt-get
+purge
+-y
+telnet
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following package was automatically installed and is no longer required:
+  libglew2.2
+Use 'sudo apt autoremove' to remove it.
+The following packages will be REMOVED:
+  telnet*
+0 upgraded, 0 newly installed, 1 to remove and 0 not upgraded.
+After this operation, 158 kB disk space will be freed.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 615494 files and directories currently installed.)
+Removing telnet (0.17-44build1) ...
+Processing triggers for man-db (2.10.2-1) ...
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 615485 files and directories currently installed.)
+Purging configuration files for telnet (0.17-44build1) ...
+[33mWARNING:[0m Tools such as nmap, Wireshark, and tcpdump are not automatically bad. Keep them if required.
+
+== 20. Persistence Checks ==
+
+== 21. Sudoers ==
+[32mOK:[0m sudoers syntax valid.
+
+== 22. File Permissions ==
+[33mWARNING:[0m Do not bulk chmod or delete SUID/SGID files.
+
+== 23. Critical Service Configuration ==
+
+== 24. Login and Authentication ==
+Backed up /etc/lightdm/lightdm.conf.d/99-cyberpatriot.conf -> /root/cp-hardener-20261006_025056/backups/etc/lightdm/lightdm.conf.d/99-cyberpatriot.conf
+
+== 25. Processes ==
+
+== 26. Security Logs ==
+
+== 27. Final Verification ==
+[32mOK:[0m Required service active: vsftpd
+[32mOK:[0m sudoers configuration valid.
+
+== 28. Manual Checks Still Required ==
