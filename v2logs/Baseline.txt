@@ -1,0 +1,319 @@
+Date: 2026-10-06T02:53:04+00:00
+
+--- /etc/passwd ---
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:102:105::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:103:106:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+syslog:x:104:111::/home/syslog:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+tss:x:106:112:TPM software stack,,,:/var/lib/tpm:/bin/false
+rtkit:x:107:113:RealtimeKit,,,:/proc:/usr/sbin/nologin
+systemd-coredump:x:108:114:systemd Core Dumper,,,:/run/systemd:/usr/sbin/nologin
+kernoops:x:109:65534:Kernel Oops Tracking Daemon,,,:/:/usr/sbin/nologin
+uuidd:x:110:119::/run/uuidd:/usr/sbin/nologin
+cups-pk-helper:x:111:115:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
+lightdm:x:112:120:Light Display Manager:/var/lib/lightdm:/bin/false
+tcpdump:x:113:122::/nonexistent:/usr/sbin/nologin
+speech-dispatcher:x:114:29:Speech Dispatcher,,,:/run/speech-dispatcher:/bin/false
+avahi-autoipd:x:115:125:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/usr/sbin/nologin
+usbmux:x:116:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+nm-openvpn:x:117:126:NetworkManager OpenVPN,,,:/var/lib/openvpn/chroot:/usr/sbin/nologin
+geoclue:x:118:127::/var/lib/geoclue:/usr/sbin/nologin
+dnsmasq:x:119:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+pulse:x:120:128:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+_flatpak:x:121:131:Flatpak system-wide installation helper,,,:/nonexistent:/usr/sbin/nologin
+avahi:x:122:132:Avahi mDNS daemon,,,:/run/avahi-daemon:/usr/sbin/nologin
+saned:x:123:133::/var/lib/saned:/usr/sbin/nologin
+colord:x:124:134:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+fwupd-refresh:x:125:135:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
+hplip:x:126:7:HPLIP system user,,,:/run/hplip:/bin/false
+chowe:x:1014:1014:chowe:/home/chowe:/bin/bash
+ftp:x:127:137:ftp daemon,,,:/srv/ftp:/usr/sbin/nologin
+felix:x:500:65534::/home/felix:/usr/sbin/nologin
+rowan:x:1019:1019::/home/rowan:/bin/bash
+kaia:x:1020:1020::/home/kaia:/bin/bash
+nolan:x:1021:1021::/home/nolan:/bin/bash
+finn:x:1022:1022::/home/finn:/bin/bash
+bennett:x:1023:1023::/home/bennett:/bin/bash
+quinn:x:1024:1024::/home/quinn:/bin/bash
+reed:x:1025:1025::/home/reed:/bin/bash
+aria:x:1026:1026::/home/aria:/bin/bash
+nova:x:1027:1027::/home/nova:/bin/bash
+elias:x:1028:1028::/home/elias:/bin/bash
+ivy:x:1029:1029::/home/ivy:/bin/bash
+sienna:x:1030:1030::/home/sienna:/bin/bash
+rabia:x:1031:1031::/home/rabia:/bin/sh
+ezekiel:x:1032:1032::/home/ezekiel:/bin/sh
+albert:x:1033:1033::/home/albert:/bin/sh
+
+--- /etc/group ---
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,chowe,rabia,albert,nova,ezekiel
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:chowe,rabia,albert,nova,ezekiel
+fax:x:21:chowe,rabia,albert,nova,ezekiel
+voice:x:22:
+cdrom:x:24:chowe,rabia,albert,nova,ezekiel
+floppy:x:25:chowe,rabia,albert,nova,ezekiel
+tape:x:26:chowe,rabia,albert,nova,ezekiel
+sudo:x:27:chowe,rabia,albert,ezekiel
+audio:x:29:pulse,chowe
+dip:x:30:chowe,rabia,albert,nova,ezekiel
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:chowe,rabia,albert,nova,ezekiel
+sasl:x:45:
+plugdev:x:46:chowe,rabia,albert,nova,ezekiel
+staff:x:50:
+games:x:60:
+users:x:100:chowe
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+crontab:x:104:
+messagebus:x:105:
+systemd-timesync:x:106:
+input:x:107:
+sgx:x:108:
+kvm:x:109:
+render:x:110:
+syslog:x:111:
+tss:x:112:
+rtkit:x:113:
+systemd-coredump:x:114:
+lpadmin:x:115:chowe,rabia,albert,nova,ezekiel
+bluetooth:x:116:chowe
+ssl-cert:x:117:
+netdev:x:118:chowe
+uuidd:x:119:
+lightdm:x:120:
+nopasswdlogin:x:121:nova
+tcpdump:x:122:
+_ssh:x:123:
+plocate:x:124:
+avahi-autoipd:x:125:
+nm-openvpn:x:126:
+geoclue:x:127:
+pulse:x:128:
+pulse-access:x:129:
+scanner:x:130:saned,chowe
+_flatpak:x:131:
+avahi:x:132:
+saned:x:133:
+colord:x:134:
+fwupd-refresh:x:135:
+sambashare:x:136:chowe,rabia,albert,nova,ezekiel
+liv:x:1005:
+chowe:x:1014:
+ftp:x:137:
+wireshark:x:138:
+rowan:x:1019:
+kaia:x:1020:
+nolan:x:1021:
+finn:x:1022:
+bennett:x:1023:
+quinn:x:1024:
+reed:x:1025:
+aria:x:1026:
+nova:x:1027:
+elias:x:1028:
+ivy:x:1029:
+sienna:x:1030:
+rabia:x:1031:
+ezekiel:x:1032:
+albert:x:1033:
+
+--- sudo ---
+sudo:x:27:chowe,rabia,albert,ezekiel
+
+--- listening sockets ---
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                     
+udp   UNCONN 0      0            0.0.0.0:36000      0.0.0.0:*    users:(("squid",pid=33418,fd=9))           
+udp   UNCONN 0      0        224.0.0.251:5353       0.0.0.0:*    users:(("chromium",pid=1840,fd=166))       
+udp   UNCONN 0      0      127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=14362,fd=13))
+udp   UNCONN 0      0                  *:53191            *:*    users:(("squid",pid=33418,fd=8))           
+tcp   LISTEN 0      1            0.0.0.0:1337       0.0.0.0:*    users:(("python3",pid=2227,fd=3))          
+tcp   LISTEN 0      32           0.0.0.0:21         0.0.0.0:*    users:(("vsftpd",pid=32794,fd=3))          
+tcp   LISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=14362,fd=14))
+tcp   LISTEN 0      256                *:3128             *:*    users:(("squid",pid=33418,fd=12))          
+
+--- running services ---
+  UNIT                                                  LOAD   ACTIVE SUB     DESCRIPTION
+  accounts-daemon.service                               loaded active running Accounts Service
+  acpid.service                                         loaded active running ACPI event daemon
+  alsa-restore.service                                  loaded active exited  Save/Restore Sound Card State
+  apparmor.service                                      loaded active exited  Load AppArmor profiles
+  blk-availability.service                              loaded active exited  Availability of block devices
+  ccsclient.service                                     loaded active running CCS Client Service
+  console-setup.service                                 loaded active exited  Set console font and keymap
+  cron.service                                          loaded active running Regular background program processing daemon
+  dbus.service                                          loaded active running D-Bus System Message Bus
+  finalrd.service                                       loaded active exited  Create final runtime dir for shutdown pivot root
+  fwupd.service                                         loaded active running Firmware update daemon
+  getty@tty1.service                                    loaded active running Getty on tty1
+  ifupdown-pre.service                                  loaded active exited  Helper to synchronize boot up for ifupdown
+  irqbalance.service                                    loaded active running irqbalance daemon
+  kerneloops.service                                    loaded active running Tool to automatically collect and submit kernel crash signatures
+  keyboard-setup.service                                loaded active exited  Set the console keyboard layout
+  kmod-static-nodes.service                             loaded active exited  Create List of Static Device Nodes
+  lightdm.service                                       loaded active running Light Display Manager
+  lm-sensors.service                                    loaded active exited  Initialize hardware monitoring sensors
+  lvm2-monitor.service                                  loaded active exited  Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling
+  ModemManager.service                                  loaded active running Modem Manager
+  networkd-dispatcher.service                           loaded active running Dispatcher daemon for systemd-networkd
+  networking.service                                    loaded active exited  Raise network interfaces
+  NetworkManager.service                                loaded active running Network Manager
+  open-vm-tools.service                                 loaded active running Service for virtual machines hosted on VMware
+  openvpn.service                                       loaded active exited  OpenVPN service
+  packagekit.service                                    loaded active running PackageKit Daemon
+  plymouth-quit-wait.service                            loaded active exited  Hold until boot process finishes up
+  plymouth-read-write.service                           loaded active exited  Tell Plymouth To Write Out Runtime Data
+  plymouth-start.service                                loaded active exited  Show Plymouth Boot Screen
+  polkit.service                                        loaded active running Authorization Manager
+  rsyslog.service                                       loaded active running System Logging Service
+  rtkit-daemon.service                                  loaded active running RealtimeKit Scheduling Policy Service
+  setvtrgb.service                                      loaded active exited  Set console scheme
+  squid.service                                         loaded active running Squid Web Proxy Server
+  switcheroo-control.service                            loaded active running Switcheroo Control Proxy service
+  systemd-binfmt.service                                loaded active exited  Set Up Additional Binary Formats
+  systemd-fsck@dev-disk-by\x2duuid-DFF5\x2d2DB7.service loaded active exited  File System Check on /dev/disk/by-uuid/DFF5-2DB7
+  systemd-journal-flush.service                         loaded active exited  Flush Journal to Persistent Storage
+  systemd-journald.service                              loaded active running Journal Service
+  systemd-logind.service                                loaded active running User Login Management
+  systemd-modules-load.service                          loaded active exited  Load Kernel Modules
+  systemd-random-seed.service                           loaded active exited  Load/Save Random Seed
+  systemd-remount-fs.service                            loaded active exited  Remount Root and Kernel File Systems
+  systemd-resolved.service                              loaded active running Network Name Resolution
+  systemd-sysctl.service                                loaded active exited  Apply Kernel Variables
+  systemd-sysusers.service                              loaded active exited  Create System Users
+  systemd-timesyncd.service                             loaded active running Network Time Synchronization
+  systemd-tmpfiles-setup-dev.service                    loaded active exited  Create Static Device Nodes in /dev
+  systemd-tmpfiles-setup.service                        loaded active exited  Create Volatile Files and Directories
+  systemd-udev-settle.service                           loaded active exited  Wait for udev To Complete Device Initialization
+  systemd-udev-trigger.service                          loaded active exited  Coldplug All udev Devices
+  systemd-udevd.service                                 loaded active running Rule-based Manager for Device Events and Files
+  systemd-update-utmp.service                           loaded active exited  Record System Boot/Shutdown in UTMP
+  systemd-user-sessions.service                         loaded active exited  Permit User Sessions
+  ubuntu-system-adjustments.service                     loaded active exited  Ubuntu system adjustments
+  udisks2.service                                       loaded active running Disk Manager
+  ufw.service                                           loaded active exited  Uncomplicated firewall
+  upower.service                                        loaded active running Daemon for power management
+  user-runtime-dir@1014.service                         loaded active exited  User Runtime Directory /run/user/1014
+  user@1014.service                                     loaded active running User Manager for UID 1014
+  vgauth.service                                        loaded active running Authentication service for virtual machines hosted on VMware
+  vsftpd.service                                        loaded active running vsftpd FTP server
+  wpa_supplicant.service                                loaded active running WPA supplicant
+  zfs-load-module.service                               loaded active exited  Install ZFS kernel module
+  zfs-mount.service                                     loaded active exited  Mount ZFS filesystems
+  zfs-share.service                                     loaded active exited  ZFS file system shares
+  zfs-volume-wait.service                               loaded active exited  Wait for ZFS Volume (zvol) links in /dev
+  zfs-zed.service                                       loaded active running ZFS Event Daemon (zed)
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+69 loaded units listed.
+
+--- enabled services ---
+UNIT FILE                          STATE   VENDOR PRESET
+accounts-daemon.service            enabled enabled
+anacron.service                    enabled enabled
+apparmor.service                   enabled enabled
+blk-availability.service           enabled enabled
+blueman-mechanism.service          enabled enabled
+bluetooth.service                  enabled enabled
+casper-md5check.service            enabled enabled
+casper.service                     enabled enabled
+ccsclient.service                  enabled enabled
+console-setup.service              enabled enabled
+cron.service                       enabled enabled
+cups-browsed.service               enabled enabled
+dmesg.service                      enabled enabled
+dns-clean.service                  enabled enabled
+e2scrub_reap.service               enabled enabled
+finalrd.service                    enabled enabled
+getty@.service                     enabled enabled
+gpu-manager.service                enabled enabled
+grub-common.service                enabled enabled
+grub-initrd-fallback.service       enabled enabled
+irqbalance.service                 enabled enabled
+kerneloops.service                 enabled enabled
+keyboard-setup.service             enabled enabled
+lm-sensors.service                 enabled enabled
+lvm2-monitor.service               enabled enabled
+mintsystem.service                 enabled enabled
+ModemManager.service               enabled enabled
+networkd-dispatcher.service        enabled enabled
+networking.service                 enabled enabled
+NetworkManager-dispatcher.service  enabled enabled
+NetworkManager-wait-online.service enabled enabled
+NetworkManager.service             enabled enabled
+open-vm-tools.service              enabled enabled
+openvpn.service                    enabled enabled
+rsyslog.service                    enabled enabled
+secureboot-db.service              enabled enabled
+setvtrgb.service                   enabled enabled
+squid.service                      enabled enabled
+switcheroo-control.service         enabled enabled
+systemd-pstore.service             enabled enabled
+systemd-resolved.service           enabled enabled
+systemd-timesyncd.service          enabled enabled
+thermald.service                   enabled enabled
+ubuntu-system-adjustments.service  enabled enabled
+udisks2.service                    enabled enabled
+ufw.service                        enabled enabled
+vgauth.service                     enabled enabled
+vsftpd.service                     enabled enabled
+wpa_supplicant.service             enabled enabled
+zfs-import-cache.service           enabled enabled
+zfs-load-module.service            enabled enabled
+zfs-mount.service                  enabled enabled
+zfs-share.service                  enabled enabled
+zfs-volume-wait.service            enabled enabled
+zfs-zed.service                    enabled enabled
+
+55 unit files listed.
+
+--- ufw ---
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
